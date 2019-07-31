@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobile_Product_Page - Kappa Guitars</title>
+	<link rel="stylesheet" type="text/css" href="./css/08_Mobile_Product.css">
+	<script src="myjavascript.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=New Rocker' rel='stylesheet'>
+</head>
+<body>
+	<div id="main_base">
+		<header>
+			<div id="search_base">
+				<div class="search-container">
+					<form action="#">
+						<input id="search_js" type="text" onfocus="this.value=''" onfocusout=SearchResponsive() value="Search..." name="search">
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+				<div id="logout">
+					<div class="popup" onclick="LogoutPopup()">
+						<input type="image" src="./images/logout.png">
+						<div id="logout_txt">
+							&nbsp;Log out
+						</div>
+						<span class="popuptext" id="logoutpopup">You cannot logout now!</span>					
+					</div>
+				</div>
+				<div id="mycart">
+					<div class="popup" onclick="MyCartPopup()">
+						<input type="image" src="./images/Cart_mobile.png">
+						<span class="popuptext" id="mycartpopup">Cart Unavailable!</span>
+						<div id="mycart_txt">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dropdown">
+					<img class="dropbtn" src="./images/drop_down_mobile.png" onclick="dropdown()">
+					<div id="myDropdown" class="dropdown_content">
+						<a id="dropdown_home" href="Kappa Guitars 9 - Mobile_Homepage.html">Home</a>
+						<a id="dropdown_product" href="Kappa Guitars 8 - Mobile Product.html">Guitars</a>
+						<a id="dropdown_product" class="deadlinks">Artists</a>
+						<a id="dropdown_product" class="deadlinks">Custom Shop</a>
+						<a id="dropdown_product" class="deadlinks">Support</a>
+					</div>
+			</div>
+			<a href="Kappa Guitars 9 - Mobile_Homepage.html"><img id="logo" src="./images/Mobile_Logo.png"></a>
+		</header>
+		<div id="main_product">
+			<div id="slideshow">
+				<div class="slideshow-container">
+					<div id="first_slide" class="mySlides fade">
+						<img src="./images/jem_frontal.png">
+					</div>
+					<div class="mySlides fade">
+						<img src="./images/jem_blue.png">
+					</div>
+					<a class="prev" onclick="plusSlides(-1)" style=" left:2%;">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)" style=" right:2%;">&#10095;</a>
+				</div>
+			</div>
+			<div id="title_price">
+				<div id="title">
+					Steve Vai Jem Signature Model
+				</div>
+				<div id="price">
+					Price: 2799,00 $
+				</div>
+				<div id="add_to_cart" onclick="UpdateCartMobile(this,false)">
+					Add to Cart
+				</div>
+			</div>
+			
+			
+			<button id="specs_non_clickable" class="accordion">Specs</button>
+			<div id="specs_panel" class="panel">
+				<table>
+					<tr>
+						<th>Neck Type</th>
+						<td>JEM 5pc Maple/Walnut neck</td>
+					</tr>
+					<tr>
+						<th>Body</th>
+						<td>Alder body</td>
+					</tr>
+					<tr>
+						<th>Fretboard</th>
+						<td>Rosewood fretboard w/Tree of Life inlay</td>
+					</tr>
+					<tr>
+						<th>Fret</th>
+						<td>W/6105 frets w/Prestige fret edge treatment</td>
+					</tr>
+					<tr>
+						<th>Neck Pickup</th>
+						<td>DiMarzio® Evolution® (H) neck pickup (Passive/Ceramic)</td>
+					</tr>
+					<tr>
+						<th>Middle pickup</th>
+						<td>DiMarzio® Evolution® (S) middle pickup (Passive/Alnico)</td>
+					</tr>
+					<tr>
+						<th>Bridge Pickup</th>
+						<td>DiMarzio® Evolution® (H) bridge pickup (Passive/Ceramic)</td>
+					</tr>
+					<tr>
+						<th>Factory Tuning</th>
+						<td>1E, 2B, 3G, 4D, 5A, 6E</td>
+					</tr>
+					<tr>
+						<th>Body</th>
+						<td>Alder body</td>
+					</tr>
+					<tr>
+						<th>String Gauge</th>
+						<td>.009/.011/.016/.024/.032/.042</td>
+					</tr>
+					<tr>
+						<th>Hardware color</th>
+						<td>Gold</td>
+					</tr>
+					<tr>
+						<th>Case/Bag</th>
+						<td>Hardshell case included</td>
+					</tr>
+				</table>
+			</div>
+			<button class="accordion">Description</button>
+			<div id="description_text" class="panel">
+				<p>When Steve Vai teamed up with Kappa Guitars in 1987, 
+				little did he realize what a lasting impact his signature model guitar would have.
+				Today, the JEM is an iconic instrument immediately identified with
+				the legendary guitarist.Famous for its distinctive look and innovative design,
+				time has seen this popular, upscale guitar become the most counterfeited model in
+				the world.</p> <p>In an effort to make the JEM available to a broader fan base,
+				Kappa Guitars has released the JEMJR, providing more affordable access
+				to the magic that is the JEM. Featuring a mahogany body attached to a Wizard III 
+				neck, the JEMJR offers many of the JEMs distinguishing characteristics;
+				the H/S/H pickup configuration, the Tree of Life inlay, a double locking tremolo
+				system, and, of course, the famous Monkey grip and Lion's Claw tremolo cavity.</p> 
+			</div>
+			<button class="accordion">Video</button>
+			<div class="panel">
+				<iframe width="414" height="345" src="https://www.youtube.com/embed/Ej0vcp5t0EM?rel=0" allowfullscreen>
+				</iframe>
+			</div>
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+				var i;
+
+				for (i = 0; i < acc.length; i++) {
+				  acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.maxHeight){
+					  panel.style.maxHeight = null;
+					} else {
+					  panel.style.maxHeight = panel.scrollHeight + "px";
+					} 
+				  });
+				}
+			</script>
+		</div>
+		<div id="kappa_div">
+			<img id="kappa" src="./images/k_mobile.png" onclick="location.href='Kappa Guitars 9 - Mobile_Homepage.html'">
+		</div>
+		<div>
+			<img id="line" src="./images/line_mobile.png">
+			<table id="bottom_links_table">
+				<tr>
+					<th id="product_clickable" class="bottom_links" onclick="location.href='Kappa Guitars 8 - Mobile Product.html'">Products</th>
+					<th class="bottom_links">Artists</th>
+					<th class="bottom_links">Support</th>
+					<th class="bottom_links">Contact us</th>
+				</tr>
+			</table>
+		</div>
+		<footer>
+			Copyright &copy; 2018, Kappa Guitars. All rights reserved.<p>
+			Design by KStudios
+		</footer>
+	</div>
+</body>
+
+
+
+
+
+

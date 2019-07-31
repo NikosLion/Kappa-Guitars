@@ -1,0 +1,345 @@
+body {
+	position: relative;
+	width: 100%;
+	background-image: url("../images/Background1.png"), url("../images/Background2.png");
+	background-color: black;
+}
+
+#main_base {
+	margin: auto;
+	width: 65%;
+	height: 100%;
+	background: #051A33;
+}
+
+header {
+	position: relative;
+}
+
+#logo {
+	background-color: #051A33;
+	width: 600px;
+	height: 85px;
+	padding: 15px 0px 0px 20px;
+}
+
+.search-container {
+	position: absolute;
+	top: 20%;
+	right: 0.5%;
+}
+
+input[type=text] {
+    padding: 6px;
+	margin-top: 8px;
+    font-size: 110%;
+	border: none;
+	background: #D8E0E5;
+}
+
+input:focus{
+	outline: none;
+}
+
+.search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #BEC4C7;
+	font-size: 110%;
+	border: none;
+	cursor: pointer;
+}
+
+.search-container button:hover {
+	background: #ABB1B4;
+}
+
+#user {
+	background-color: #051A33;
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	top: 66%;
+	right: 12.2%;
+}
+
+#user_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	font-family: "Verdana";
+	vertical-align:top;
+	font-size: 100%;
+}
+
+#logout {
+	background-color: #051A33;
+	width: 85px;
+	height: 20px;
+	position: absolute;
+	top: 66%;
+	right: 2.2%;
+}
+
+#logout_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	font-family: "Verdana";
+	vertical-align:top;
+	font-size: 100%;
+}
+
+#mycart {
+	background-color: #051A33;
+	width: 125px;
+	height: 20px;
+	position: absolute;
+	top: 91%;
+	right: 0px;
+}
+
+#mycart_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	font-family: "Verdana";
+	vertical-align:top;
+	font-size: 100%;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #D8E0E5;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 3%;
+	padding-bottom: 1.5%;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+	border-right-style: solid;
+	border-width: 2px;
+	border-right-color: #D8E0E5;
+}
+
+.no-right-border {
+	border-width: 0px;
+}
+
+#supp-border {
+	border-width: 0px;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: #D8E0E5;
+    text-align: center;
+    padding: 10px 45px;
+    text-decoration: none;
+	font-family: 'New Rocker';
+	font-size: 180%;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #152F4F;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.guitars {
+    display: none;
+    position: absolute;
+    background-color: #1C3B61;
+    min-width: 50px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.guitars a {
+    color: #D8E0E5;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	font-size: 117.5%;
+}
+
+.artists {
+    display: none;
+    position: absolute;
+    background-color: #1C3B61;
+    min-width: 50px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.artists a {
+    color: #D8E0E5;
+    padding: 12px 20.5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	font-size: 118%;
+}
+
+.support {
+    display: none;
+    position: absolute;
+    background-color: #1C3B61;
+    min-width: 50px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.support a {
+    color: #D8E0E5;
+    padding: 12px 12.5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	font-size: 118%;
+}
+
+.guitars a:hover {background-color: #152F4F}
+
+.artists a:hover {background-color: #152F4F}
+
+.support a:hover {background-color: #152F4F}
+
+
+.dropdown:hover .guitars {
+    display: block;
+}
+
+.dropdown:hover .artists {
+    display: block;
+}
+
+.dropdown:hover .support {
+    display: block;
+}
+
+#custom_shop_base {
+	margin: auto;
+	width: 100%;
+	height: 800px;
+	background: #D8E0E5;
+	padding-bottom: 13%;
+}
+
+#custom_shop {
+	width: 100%;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5%;
+	padding-bottom: 2%;
+}
+
+#line {
+	padding-bottom: 2%;
+}
+
+table{
+	width: 65%;
+	color: #D8E0E5;
+	position:absolute;
+	border-collapse: collapse;
+}
+
+th{
+	font-size: 140%;
+	color: #D8E0E5;
+	font-family: "Verdana";
+	border-right: 1px solid #D8E0E5;
+}
+
+td{
+	color: #D8E0E5;
+	font-size: 95%;
+	font-family: "Verdana";
+	text-align: center;
+	border-right: 1px solid #D8E0E5;
+}
+
+th:hover, td:hover {
+	cursor: pointer;
+}
+
+#custom_shop_non_clickable {
+	cursor: auto;
+}
+
+#phone_non_clickable {
+	cursor: auto;
+}
+
+#backtotopbutton {
+	display: none;
+	position: fixed;
+	bottom: 2%;
+	right: 16.2%;
+	padding-right: 1.5%;
+	cursor: pointer;
+}
+
+footer {
+	padding-top: 20%;
+	color: #D8E0E5;
+	font-family: "Verdana";
+	text-align: center;
+	font-size: 80%;
+}
+
+
+

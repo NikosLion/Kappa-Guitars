@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobile_Homepage - Kappa Guitars</title>
+	<link rel="stylesheet" type="text/css" href="./css/09_Mobile_Home.css">
+	<script src="myjavascript.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=New Rocker' rel='stylesheet'>
+</head>
+<body>
+	<div id="main_base">
+		<header>
+			<div id="search_base">
+				<div class="search-container">
+					<form action="#">
+						<input id="search_js" type="text" onfocus="this.value=''" onfocusout=SearchResponsive() value="Search..." name="search">
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+				<div id="logout">
+					<div class="popup" onclick="LogoutPopup()">
+						<input type="image" src="./images/logout.png">
+						<div id="logout_txt">
+							&nbsp;Log out
+						</div>
+						<span class="popuptext" id="logoutpopup">You cannot logout now!</span>					
+					</div>
+				</div>
+				<div id="cart">
+					<div class="popup" onclick="MyCartPopup()">
+						<input type="image" src="./images/Cart_mobile.png">
+						<span class="popuptext" id="mycartpopup">Cart Unavailable!</span>
+					</div>
+				</div>
+			</div>
+			<div class="dropdown">
+					<img class="dropbtn" src="./images/drop_down_mobile.png" onclick="dropdown()">
+					<div id="myDropdown" class="dropdown_content">
+						<a id="dropdown_home" href="Kappa Guitars 9 - Mobile_Homepage.html">Home</a>
+						<a id="dropdown_product" href="Kappa Guitars 8 - Mobile Product.html">Guitars</a>
+						<a id="dropdown_product" class="deadlinks">Artists</a>
+						<a id="dropdown_product" class="deadlinks">Custom Shop</a>
+						<a id="dropdown_product" class="deadlinks">Support</a>
+					</div>
+			</div>
+			<a href="Kappa Guitars 9 - Mobile_Homepage.html"><img id="logo" src="./images/Mobile_Logo.png"></a>
+		</header>
+		
+		<div id="releases">
+			<div id="slideshow">
+				<div class="slideshow-container">
+					<div id="first_slide" class="mySlides fade">
+						<img src="./images/mobile_new_releases.png">
+					</div>
+					<div class="mySlides fade">
+						<img src="./images/jem_blue.png">
+					</div>
+					<a class="prev" onclick="plusSlides(-1)" style=" left:2%;">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)" style=" right:2%;">&#10095;</a>
+				</div>
+			</div>
+		</div>
+		<div id="polygon">
+			<img id="polygon_image" src="./images/mobile_polygon.png">
+			<h3 id="take_a_look">Take a look at all of our new releases
+			for the new year!</h3>
+			<img id="polygon_line" src="./images/mobile_line_2018.png">
+			<h4 id="includes_detailed">Includes detailed product information and specifications</h4>
+		</div>
+		
+		<div id="products">
+			<div id="products_text">
+				<h4 id="popular_products">Popular Products</h4>
+			</div>
+			<div id="product_photos">
+				<img id="product1_image" class="products" src="./images/kappa_invader.png" onclick="location.href='Kappa Guitars 8 - Mobile Product.html'">
+				<img id="product2_image" class="products" src="./images/kappa_black_beauty.png" onclick="location.href='Kappa Guitars 8 - Mobile Product.html'">
+				<img id="product3_image" class="products" src="./images/kappa_mb_200.png" onclick="location.href='Kappa Guitars 8 - Mobile Product.html'">
+				<img id="product4_image" class="products" src="./images/kappa_fusion_ce.png" onclick="location.href='Kappa Guitars 8 - Mobile Product.html'">
+			</div>
+		</div>
+		
+		<div id="artists">
+			<div id="artists_text">
+				<h4 id="new_artists">New artists signing with Kappa Guitars</h4>
+			</div>
+			<div id="artists_photos">
+				<img id="product1_image" class="products" src="./images/mobile_devin.png">
+				<img id="product2_image" class="products" src="./images/mobile_petrucci.png">
+				<img id="product3_image" class="products" src="./images/mobile_slash.png">
+				<img id="product4_image" class="products" src="./images/mobile_al.png">
+			</div>
+		</div>
+		
+		<div id="become_a_member">
+			<div id="stay">
+				STAY CONNECTED :
+			</div>
+			<img id="become_image" src="./images/mobile_member.png">
+			<br>
+			<div id="keep">
+				keep in touch with all<br>latest news and releases!
+			</div>
+		</div>
+		
+		<div id="kappa_div">
+			<img id="kappa" src="./images/k_mobile.png" onclick="location.href='Kappa Guitars 9 - Mobile_Homepage.html'">
+		</div>
+		<div>
+			<img id="line" src="./images/line_mobile.png">
+			<table id="bottom_links_table">
+				<tr>
+					<th id="product_clickable" class="bottom_links" onclick="location.href='Kappa Guitars 8 - Mobile Product.html'">Products</th>
+					<th class="bottom_links">Artists</th>
+					<th class="bottom_links">Support</th>
+					<th class="bottom_links">Contact us</th>
+				</tr>
+			</table>
+		</div>
+		<footer>
+			Copyright &copy; 2018, Kappa Guitars. All rights reserved.<p>
+			Design by KStudios
+		</footer>
+	</div>
+</body>
+
+
+
+
+
+

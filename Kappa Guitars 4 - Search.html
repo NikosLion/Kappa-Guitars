@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search_Page - Kappa Guitars</title>
+	<link rel="stylesheet" type="text/css" href="./css/04_Search.css">
+	<script src="myjavascript.js"></script>
+	<script src="search_responsive.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=New Rocker' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div id="main_base">
+		<header>
+			<a href="Kappa Guitars 1 - Homepage.html"><img id="logo" src="./images/Logo.png"></a>
+			<div class="search-container">
+				<form action="Kappa Guitars 4 - Search.html">
+					<input id="search_js" type="text" onfocus="this.value=''" onfocusout=SearchResponsive() value="Search..." name="search" autocomplete="on">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<div id="user">
+				<div class="popup" onmouseover="UserPopup()">
+					<input type="image" src="./images/user.png" style="float:left;" width=20%>
+					<div id="user_txt">
+						&nbsp;User 007
+					</div>
+					<span class="popuptext" id="userpopup">Welcome User 007!</span>					
+				</div>				
+			</div>
+			<div id="logout">
+				<div class="popup" onmouseover="LogoutPopup()">
+					<input type="image" src="./images/logout.png" style="float:left;" width=20%>
+					<div id="logout_txt">
+						&nbsp;Log out
+					</div>
+					<span class="popuptext" id="logoutpopup">You cannot log out now!</span>					
+				</div>				
+			</div>
+			<div id="mycart">
+				<div class="popup" onmouseover="MyCartPopup()">
+					<input type="image" src="./images/cart.png" style="float:left;" width="24" height="20">
+					<div id="mycart_txt">
+						&nbsp;My Cart
+					</div>
+					<span class="popuptext" id="mycartpopup">Cart unavailable!</span>					
+				</div>
+			</div>			
+		</header>
+				
+		<div id="navbar">
+			<ul>
+			  <li><a href="Kappa Guitars 1 - Homepage.html">HOME</a></li>
+			  <li class="dropdown">
+				<a href="Kappa Guitars 2 - Categories.html" class="dropbtn">GUITARS</a>
+				<div class="guitars">
+				  <a href="Kappa Guitars 3 - Product.html">ELECTRIC GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">ACOUSTIC GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">CLASSICAL GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">BASS GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">ACCESORIES</a>
+				  <a href="Kappa Guitars 6 - Custom Shop.html">CUSTOM SHOP</a>
+				</div>
+			  </li>
+			  <li class="dropdown">
+				<a href="Kappa Guitars 5 - Artists.html" class="dropbtn">ARTISTS</a>
+				<div class="artists">
+				  <a href="Kappa Guitars 5 - Artists.html">STEVE VAI</a>
+				  <a href="Kappa Guitars 5 - Artists.html">DEVIN TOWNSEND</a>
+				  <a href="Kappa Guitars 5 - Artists.html">STEVE HARRIS</a>
+				  <a href="Kappa Guitars 5 - Artists.html">AL DI MEOLA</a>
+				  <a href="Kappa Guitars 5 - Artists.html">JOE SATRIANI</a>
+				</div>
+			  </li>
+			  <li><a href="Kappa Guitars 6 - Custom Shop.html">CUSTOM SHOP</a></li>
+			  <li class="dropdown" id="supp-border">
+				<a href="Kappa Guitars 7 - Support.html" class="dropbtn">SUPPORT</a>
+				<div class="support">
+				  <a href="Kappa Guitars 7 - Support.html">TECHNICAL SUPPORT</a>
+				  <a href="Kappa Guitars 7 - Support.html">GENERAL SUPPORT</a>
+				  <a href="Kappa Guitars 7 - Support.html">DEALERS</a>
+				</div>
+			  </li>
+			</ul>
+		</div>
+		
+		<section id="search_base">
+			<section id="filter-container">
+				<header style="font-size:160%; margin-left:2%; margin-bottom:5%">Ratings</header>
+				<label class="container">&nbsp;
+					<span class="fa fa-star checked" style="margin-top:1%"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+				  <input type="checkbox" id="five_stars" onclick="papapap('five_stars', this)">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;
+					<span class="fa fa-star checked" style="margin-top:1%"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star unchecked"></span>
+				  <input type="checkbox" id="four_stars" onclick="papapap('four_stars', this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;
+					<span class="fa fa-star checked" style="margin-top:1%"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star unchecked"></span>
+					<span class="fa fa-star unchecked"></span>
+				  <input type="checkbox" id="three_stars" onclick="papapap('three_stars', this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;
+					<span class="fa fa-star checked" style="margin-top:1%"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star unchecked"></span>
+					<span class="fa fa-star unchecked"></span>
+					<span class="fa fa-star unchecked"></span>
+				  <input type="checkbox" id="two_stars" onclick="papapap('two_stars', this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;
+					<span class="fa fa-star checked" style="margin-top:1%"></span>
+					<span class="fa fa-star unchecked"></span>
+					<span class="fa fa-star unchecked"></span>
+					<span class="fa fa-star unchecked"></span>
+					<span class="fa fa-star unchecked"></span>
+				  <input type="checkbox" id="one_star" onclick="papapap('one_star', this);">
+				  <span class="checkmark"></span>
+				</label>
+				
+				<img src="./images/Line 3.png" style="margin-left:2%; margin-bottom:1%" width="355" height="2">
+				
+				<header style="font-size:160%; margin-left:2%; margin-bottom:5%">Price Range</header>
+				<label class="container">&nbsp;<500$
+				  <input type="checkbox" id="less_five" onclick="papapap('less_five', this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;500$ - 1000$
+				  <input type="checkbox" id="five_thousand" onclick="papapap('five_thousand', this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;1000$ - 2000$
+				  <input type="checkbox" id="thousand_two" onclick="papapap('thousand_two', this);">
+				  <span class="checkmark"></span>
+				</label>
+				
+				<img src="./images/Line 3.png" style="margin-left:2%;" width="355" height="2">
+				
+				<header style="font-size:160%; margin-left:2%; margin-bottom:5%">Color</header>
+				<label class="container">&nbsp;Sunburst (3)
+				  <input type="checkbox" id="color_sunburst" onclick="papapap('sunburst', this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;Black (1)
+				  <input type="checkbox" id="color_black" onclick="papapap('black', this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;Cherry(1)
+				  <input type="checkbox" id="color_cherry" onclick="papapap('cherry', this);">
+				  <span class="checkmark"></span>
+				</label>
+				
+				<img src="./images/Line 3.png" style="margin-left:2%; margin-bottom:1%" width="355" height="2">
+				
+				<header style="font-size:160%; margin-left:2%; margin-bottom:5%">Body</header>
+				<label class="container">&nbsp;Mahogany(3)
+				  <input type="checkbox" id="body_mahogany" onclick="papapap('body_mahogany',this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;Alder(1)
+				  <input type="checkbox" id="body_alder" onclick="papapap('body_alder',this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;Basswood(1)
+				  <input type="checkbox" id="body_basswood" onclick="papapap('body_basswood',this);">
+				  <span class="checkmark"></span>
+				</label>
+				
+				<img src="./images/Line 3.png" style="margin-left:2%; margin-bottom:1%" width="355" height="2">
+				
+				<header style="font-size:160%; margin-left:2%; margin-bottom:5%">Neck</header>
+				<label class="container">&nbsp;Mahogany(2)
+				  <input type="checkbox" id="neck_mahogany" onclick="papapap('neck_mahogany',this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;Maple(2)
+				  <input type="checkbox" id="neck_maple" onclick="papapap('neck_maple',this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;Rosewood(1)
+				  <input type="checkbox" id="neck_rosewood" onclick="papapap('neck_rosewood',this);">
+				  <span class="checkmark"></span>
+				</label>
+				
+				<img src="./images/Line 3.png" style="margin-left:2%; margin-bottom:1%" width="355" height="2">
+				
+				<header style="font-size:160%; margin-left:2%; margin-bottom:5%">Fretboard</header>
+				<label class="container">&nbsp;Rosewood(2)
+				  <input type="checkbox" id="fretboard_mahogany" onclick="papapap('fretboard_mahogany',this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;Ebony(2)
+				  <input type="checkbox" id="fretboard_ebony" onclick="papapap('fretboard_ebony',this);">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="container">&nbsp;Walnut(1)
+				  <input type="checkbox" id="fretboard_walnut" onclick="papapap('fretboard_walnut',this);">
+				  <span class="checkmark"></span>
+				</label>
+				
+				<img src="./images/Line 3.png" style="margin-left:2%; margin-bottom:1%" width="355" height="2">
+				
+				<a href="Kappa Guitars 4 - Search.html" style="margin-left:40%">Clear filters</a>
+				
+			</section>
+			
+			<section id="product-container">
+				<header id="results">
+					5 search results for "les paul"
+					<p>Displaying item(s) 5 of 5<br>5 entries contain all terms you searched for</p>
+				</header>
+				
+				<section id="guitar1">
+					<section id="left">
+						<a href="Kappa Guitars 3 - Product.html"><img src="./images/guitar1.png" width="163" height="160"></a>
+						<div id="guitar1_txt">
+							<a href="Kappa Guitars 3 - Product.html" style="text-decoration: none; color:black;">Kappa Les Paul Tribute 2018 FHB<br></a>
+							<div style="font-size:60%">
+								<span class="fa fa-star checked" style="margin-top:2%; margin-left:1%"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span> &nbsp; &nbsp;Electric Guitar
+							</div>
+							<div style="font-size:80%;margin-top:1%">&nbsp;Body: Mahogany<br>
+							&nbsp;Fretboard: Rosewood<br>
+							&nbsp;Neck: Mahogany<br></div>
+							<div class="popup" onclick="AvailableImmediatelyPopup1()">
+								<p style="color:#034599">Available Immediately</p>
+								<span class="popuptext" id="available1" style="font-size:70%; background: #366299; color: #D8E0E5;">This item is in stock and can be dispatched immediately.</span>					
+							</div>
+						</div>
+					</section>
+					<section id="right">
+						<div id="guitar1_price">
+							999 $
+						</div>
+						<div id="guitar1_add_to_cart" onclick="UpdateCart(this,true)">
+							Add to cart
+						</div>
+					</section>
+				</section>
+				
+				<section id="guitar2">
+					<section id="left">
+						<a href="Kappa Guitars 3 - Product.html"><img src="./images/guitar2.png" width="163" height="160"></a>
+						<div id="guitar2_txt">
+							<a href="Kappa Guitars 3 - Product.html" style="text-decoration: none; color:black;">Kappa Les Paul Custom EB GH<br></a>
+							<div style="font-size:60%">
+								<span class="fa fa-star checked" style="margin-top:2%; margin-left:1%"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star unchecked"></span> &nbsp; &nbsp;Electric Guitar
+							</div>
+							<div style="font-size:80%;margin-top:1%">&nbsp;Body: Alder<br>
+							&nbsp;Fretboard: Rosewood<br>
+							&nbsp;Neck: Mahogany<br></div>
+							<div class="popup" onclick="AvailableImmediatelyPopup2()">
+								<p style="color:#034599">Available Immediately</p>
+								<span class="popuptext" id="available2" style="font-size:70%; background: #366299; color: #D8E0E5;">This item is in stock and can be dispatched immediately.</span>					
+							</div>
+						</div>
+					</section>
+					<section id="right">
+						<div id="guitar2_price">
+							1,999 $
+						</div>
+						<div id="guitar2_add_to_cart" onclick="UpdateCart(this,true)">
+							Add to cart
+						</div>
+					</section>
+				</section>
+				
+				<section id="guitar3">
+					<section id="left">
+						<a href="Kappa Guitars 3 - Product.html"><img src="./images/guitar3.png" width="163" height="160"></a>
+						<div id="guitar3_txt">
+							<a href="Kappa Guitars 3 - Product.html" style="text-decoration: none; color:black;">Kappa Les Paul Standard Plus Pro HB<br></a>
+							<div style="font-size:60%">
+								<span class="fa fa-star checked" style="margin-top:2%; margin-left:1%"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star unchecked"></span>
+								<span class="fa fa-star unchecked"></span> &nbsp; &nbsp;Electric Guitar
+							</div>
+							<div style="font-size:80%;margin-top:1%">&nbsp;Body: Mahogany<br>
+							&nbsp;Fretboard: Ebony<br>
+							&nbsp;Neck: Maple<br></div>
+							<div class="popup" onclick="AvailableImmediatelyPopup3()">
+								<p style="color:#034599">Available Immediately</p>
+								<span class="popuptext" id="available3" style="font-size:70%; background: #366299; color: #D8E0E5;">This item is in stock and can be dispatched immediately.</span>					
+							</div>
+						</div>
+					</section>
+					<section id="right">
+						<div id="guitar3_price">
+							569 $
+						</div>
+						<div id="guitar3_add_to_cart" onclick="UpdateCart(this,true)">
+							Add to cart
+						</div>
+					</section>
+				</section>
+				
+				<section id="guitar4">
+					<section id="left">
+						<a href="Kappa Guitars 3 - Product.html"><img src="./images/guitar4.png" width="163" height="160"></a>
+						<div id="guitar4_txt">
+							<a href="Kappa Guitars 3 - Product.html" style="text-decoration: none; color:black;">Kappa Les Paul Traditional 2018 HCS<br></a>
+							<div style="font-size:60%">
+								<span class="fa fa-star checked" style="margin-top:2%; margin-left:1%"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star unchecked"></span>
+								<span class="fa fa-star unchecked"></span>
+								<span class="fa fa-star unchecked"></span> &nbsp; &nbsp;Electric Guitar
+							</div>
+							<div style="font-size:80%;margin-top:1%">&nbsp;Body: Mahogany<br>
+							&nbsp;Fretboard: Ebony<br>
+							&nbsp;Neck: Maple<br></div>
+							<div class="popup" onclick="AvailableImmediatelyPopup4()">
+								<p style="color:#034599">Available Immediately</p>
+								<span class="popuptext" id="available4" style="font-size:70%; background: #366299; color: #D8E0E5;">This item is in stock and can be dispatched immediately.</span>					
+							</div>
+						</div>
+					</section>
+					<section id="right">
+						<div id="guitar4_price">
+							1,699 $
+						</div>
+						<div id="guitar4_add_to_cart" onclick="UpdateCart(this,true)">
+							Add to cart
+						</div>
+					</section>
+				</section>
+				
+				<section id="guitar5">
+					<section id="left">
+						<a href="Kappa Guitars 3 - Product.html"><img src="./images/guitar5.png" width="163" height="160"></a>
+						<div id="guitar5_txt">
+							<a href="Kappa Guitars 3 - Product.html" style="text-decoration: none; color:black;">Kappa Prophecy LP Custom Plus GX-BC<br></a>
+							<div style="font-size:60%">
+								<span class="fa fa-star checked" style="margin-top:2%; margin-left:1%"></span>
+								<span class="fa fa-star unchecked"></span>
+								<span class="fa fa-star unchecked"></span>
+								<span class="fa fa-star unchecked"></span>
+								<span class="fa fa-star unchecked"></span> &nbsp; &nbsp;Electric Guitar
+							</div>
+							<div style="font-size:80%;margin-top:1%">
+								&nbsp;Body: Basswood<br>
+								&nbsp;Fretboard: Walnut<br>
+								&nbsp;Neck: Rosewood<br>
+							</div>
+							<div class="popup" onclick="AvailableImmediatelyPopup5()">
+								<p style="color:#034599">Available Immediately</p>
+								<span class="popuptext" id="available5" style="font-size:70%; background: #366299; color: #D8E0E5;">This item is in stock and can be dispatched immediately.</span>					
+							</div>
+						</div>
+					</section>
+					<section id="right">
+						<div id="guitar5_price">
+							698 $
+						</div>
+						<div id="guitar5_add_to_cart" onclick="UpdateCart(this,true)">
+							Add to cart
+						</div>
+					</section>					
+				</section>
+				
+				<section id="pages" style="text-align:center">
+					<br><br>Showing page 1 of 1<br><br><br>
+				</section>				
+			</section>
+		</section>
+		
+		<div id="k">
+			<img src="./images/K.png" class="center">
+		</div>
+		
+		<div id="line">
+			<img src="./images/Line.png" class="center">
+		</div>
+		
+		<table>
+			<tr>
+				<th onclick="location.href='Kappa Guitars 2 - Categories.html'">Products<p></th>
+				<th onclick="location.href='Kappa Guitars 5 - Artists.html'">Artists<p></th>
+				<th onclick="location.href='Kappa Guitars 7 - Support.html'">Support<p></th>
+				<th class="no-right-border" onclick="location.href='Kappa Guitars 10 - Contact us.html'">Contact us<p></th>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Electric Guitars</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Steve Vai</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">International Sales</td>
+				<td id="phone_non_clickable" class="no-right-border">802.110.7791</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Acoustic Guitars</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Devin Townsend</td>
+				<td onclick="location.href='Kappa Guitars 6 - Custom Shop.html'">Custom Shop</td>
+				<td class="no-right-border">info@kappa-guitars.com</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Classical Guitars</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Steve Harris</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">Technical Support</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Electric Basses</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Al Di Meola</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">General Support</td>
+				<td class="no-right-border">68 Panepistimiou Str.</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Accesories</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Joe Satriani</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">Dealers</td>
+				<td class="no-right-border">71503, Athens Greece</td>
+			</tr>
+		</table>
+	
+		<div id="top">
+			<input type="image" src="./images/Page Top.png" onclick="topFunction()" id="backtotopbutton" title="Back to top">
+			<script>window.onscroll = function() {scrollFunction()};</script>
+		</div>
+		
+		<footer>
+			Copyright &copy; 2018, Kappa Guitars. All rights reserved.<p>
+			Design by KStudios
+		</footer>
+	</div>
+</body>
+</html>

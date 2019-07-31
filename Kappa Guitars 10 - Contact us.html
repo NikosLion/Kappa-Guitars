@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Info - Kappa Guitars</title>
+	<link rel="stylesheet" type="text/css" href="./css/10_ContactUs.css">
+	<script src="myjavascript.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=New Rocker' rel='stylesheet'>
+</head>
+
+<body>
+	<div id="main_base">
+		<header>
+			<a href="Kappa Guitars 1 - Homepage.html"><img id="logo" src="./images/Logo.png"></a>
+			<div class="search-container">
+				<form action="Kappa Guitars 4 - Search.html">
+					<input id="search_js" type="text" onfocus="this.value=''" onfocusout=SearchResponsive() value="Search..." name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<div id="user">
+				<div class="popup" onmouseover="UserPopup()">
+					<input type="image" src="./images/user.png" style="float:left;" width=20%>
+					<div id="user_txt">
+						&nbsp;User 007
+					</div>
+					<span class="popuptext" id="userpopup">Welcome User 007!</span>					
+				</div>				
+			</div>
+			<div id="logout">
+				<div class="popup" onmouseover="LogoutPopup()">
+					<input type="image" src="./images/logout.png" style="float:left;" width=20%>
+					<div id="logout_txt">
+						&nbsp;Log out
+					</div>
+					<span class="popuptext" id="logoutpopup">You cannot log out now!</span>					
+				</div>				
+			</div>
+			<div id="mycart">
+				<div class="popup" onmouseover="MyCartPopup()">
+					<input type="image" src="./images/cart.png" style="float:left;" width="24" height="20">
+					<div id="mycart_txt">
+						&nbsp;My Cart
+					</div>
+					<span class="popuptext" id="mycartpopup">Cart unavailable!</span>					
+				</div>
+			</div>			
+		</header>
+				
+		<div id="navbar">
+			<ul>
+			  <li><a href="Kappa Guitars 1 - Homepage.html">HOME</a></li>
+			  <li class="dropdown">
+				<a href="Kappa Guitars 2 - Categories.html">GUITARS</a>
+				<div class="guitars">
+				  <a href="Kappa Guitars 3 - Product.html">ELECTRIC GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">ACOUSTIC GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">CLASSICAL GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">BASS GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">ACCESORIES</a>
+				  <a href="Kappa Guitars 6 - Custom Shop.html">CUSTOM SHOP</a>
+				</div>
+			  </li>
+			  <li class="dropdown">
+				<a href="Kappa Guitars 5 - Artists.html" class="dropbtn">ARTISTS</a>
+				<div class="artists">
+				  <a href="Kappa Guitars 5 - Artists.html">STEVE VAI</a>
+				  <a href="Kappa Guitars 5 - Artists.html">DEVIN TOWNSEND</a>
+				  <a href="Kappa Guitars 5 - Artists.html">STEVE HARRIS</a>
+				  <a href="Kappa Guitars 5 - Artists.html">AL DI MEOLA</a>
+				  <a href="Kappa Guitars 5 - Artists.html">JOE SATRIANI</a>
+				</div>
+			  </li>
+			  <li><a href="Kappa Guitars 6 - Custom Shop.html">CUSTOM SHOP</a></li>
+			  <li class="dropdown" id="supp-border">
+				<a href="Kappa Guitars 7 - Support.html" class="dropbtn">SUPPORT</a>
+				<div class="support">
+				  <a href="Kappa Guitars 7 - Support.html">TECHNICAL SUPPORT</a>
+				  <a href="Kappa Guitars 7 - Support.html">GENERAL SUPPORT</a>
+				  <a href="Kappa Guitars 7 - Support.html">DEALERS</a>
+				</div>
+			  </li>
+			</ul>
+		</div>
+		
+		<div id="contact_info">
+			Contact Information:<br>
+		</div>
+		<div id="info">
+			Phone number: 802.110.7791<br>
+			<p>Email: info@kappa-guitars.com</p>
+			Address: 68 Panepistimiou Str. Athens, Greece
+			<p>Postal Code: 71503</p>
+		</div>
+		
+		<div id="k">
+			<img src="./images/K.png" class="center">
+		</div>
+		
+		<div id="line">
+			<img src="./images/Line.png" class="center">
+		</div>
+		
+		<table id="pre_footer">
+			<tr>
+				<th onclick="location.href='Kappa Guitars 2 - Categories.html'">Products<p></th>
+				<th onclick="location.href='Kappa Guitars 5 - Artists.html'">Artists<p></th>
+				<th onclick="location.href='Kappa Guitars 7 - Support.html'">Support<p></th>
+				<th id="contact_us_non_clickable" class="no-right-border">Contact us<p></th>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Electric Guitars</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Steve Vai</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">International Sales</td>
+				<td id="phone_non_clickable" class="no-right-border">802.110.7791</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Acoustic Guitars</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Devin Townsend</td>
+				<td onclick="location.href='Kappa Guitars 6 - Custom Shop.html'">Custom Shop</td>
+				<td class="no-right-border">info@kappa-guitars.com</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Classical Guitars</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Steve Harris</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">Technical Support</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Electric Basses</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Al Di Meola</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">General Support</td>
+				<td class="no-right-border">68 Panepistimiou Str.</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Accesories</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Joe Satriani</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">Dealers</td>
+				<td class="no-right-border">71503, Athens Greece</td>
+			</tr>
+		</table>
+	
+		<div id="top">
+			<input type="image" src="./images/Page Top.png" onclick="topFunction()" id="backtotopbutton" title="Back to top">
+			<script>window.onscroll = function() {scrollFunction()};</script>
+		</div>
+		
+		<footer>
+			Copyright &copy; 2018, Kappa Guitars. All rights reserved.<p>
+			Design by KStudios
+		</footer>
+	</div>
+</body>
+</html>

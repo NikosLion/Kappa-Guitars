@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage - Kappa Guitars</title>
+	<link rel="stylesheet" type="text/css" href="./css/01_Homepage.css">
+	<script src="myjavascript.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=New Rocker' rel='stylesheet'>
+</head>
+<body>
+	<div id="main_base">
+		<header>
+			<a href="Kappa Guitars 1 - Homepage.html"><img id="logo" src="./images/Logo.png"></a>
+			<div class="search-container">
+				<form action="Kappa Guitars 4 - Search.html">
+					<input id="search_js" type="text" onfocus="this.value=''" onfocusout=SearchResponsive() value="Search..." name="search" autocomplete="on">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<div id="user">
+				<div class="popup" onmouseover="UserPopup()">
+					<input type="image" src="./images/user.png" style="float:left;" width=20%>
+					<div id="user_txt">
+						&nbsp;User 007
+					</div>
+					<span class="popuptext" id="userpopup">Welcome User 007!</span>					
+				</div>				
+			</div>
+			<div id="logout">
+				<div class="popup" onmouseover="LogoutPopup()">
+					<input type="image" src="./images/logout.png" style="float:left;" width=20%>
+					<div id="logout_txt">
+						&nbsp;Log out
+					</div>
+					<span class="popuptext" id="logoutpopup">You cannot log out now!</span>					
+				</div>				
+			</div>
+			<div id="mycart">
+				<div class="popup" onmouseover="MyCartPopup()">
+					<input type="image" src="./images/cart.png" style="float:left;" width="24" height="20">
+					<div id="mycart_txt">
+						&nbsp;My Cart
+					</div>
+					<span class="popuptext" id="mycartpopup">Cart unavailable!</span>					
+				</div>
+			</div>			
+		</header>
+				
+		<div id="navbar">
+			<ul>
+			  <li><a>HOME</a></li>
+			  <li class="dropdown">
+				<a href="Kappa Guitars 2 - Categories.html" class="dropbtn">GUITARS</a>
+				<div class="guitars">
+				  <a href="Kappa Guitars 3 - Product.html">ELECTRIC GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">ACOUSTIC GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">CLASSICAL GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">BASS GUITARS</a>
+				  <a href="Kappa Guitars 3 - Product.html">ACCESORIES</a>
+				  <a href="Kappa Guitars 6 - Custom Shop.html">CUSTOM SHOP</a>
+				</div>
+			  </li>
+			  <li class="dropdown">
+				<a href="Kappa Guitars 5 - Artists.html" class="dropbtn">ARTISTS</a>
+				<div class="artists">
+				  <a href="Kappa Guitars 5 - Artists.html">STEVE VAI</a>
+				  <a href="Kappa Guitars 5 - Artists.html">DEVIN TOWNSEND</a>
+				  <a href="Kappa Guitars 5 - Artists.html">STEVE HARRIS</a>
+				  <a href="Kappa Guitars 5 - Artists.html">AL DI MEOLA</a>
+				  <a href="Kappa Guitars 5 - Artists.html">JOE SATRIANI</a>
+				</div>
+			  </li>
+			  <li><a href="Kappa Guitars 6 - Custom Shop.html">CUSTOM SHOP</a></li>
+			  <li class="dropdown" id="supp-border">
+				<a href="Kappa Guitars 7 - Support.html" class="dropbtn">SUPPORT</a>
+				<div class="support">
+				  <a href="Kappa Guitars 7 - Support.html">TECHNICAL SUPPORT</a>
+				  <a href="Kappa Guitars 7 - Support.html">GENERAL SUPPORT</a>
+				  <a href="Kappa Guitars 7 - Support.html">DEALERS</a>
+				</div>
+			  </li>
+			</ul>
+		</div>
+		
+		<section id="news_base">
+			<section id="2018" style="float:left">
+				<img id="18_polygon" src="./images/18 Polygon.png" style="margin-left:20%; margin-top:2%" width=80%>
+				<div id="releases_text">
+					Take a look at all of our<br>
+					new releases for the new<br>
+					year!
+				</div>
+				<img src="./images/Line 2.png" style="margin-left: 10%;" width=85%>
+				<div id="releases_text2">
+					Includes detailed product<br>
+					information and specifications
+				</div>
+				<div id="more">
+					<a href="Kappa Guitars 3 - Product.html"><img src="./images/More.png" style="margin-left:40%;" width=30% height=40%></a>
+				</div>
+			</section>
+			
+			<section id="slideshow" style="float:left">
+				<div id="first_slide" class="mySlides fade">
+					<img src="./images/releases1.png" width=112%>
+				</div>
+				<div class="mySlides fade">
+					<img src="./images/releases2.png" width=112%>
+				</div>
+				<div class="mySlides fade">
+					<img src="./images/releases3.png" width=112%>
+				</div>
+				<a class="prev" onclick="plusSlides(-1)" style="top:400px; right:920px;">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)" style="top:400px; right:340px;">&#10095;</a>
+				<span class="dot" onclick="currentSlide(1)" style="top:675px; right: 680px;"></span>
+				<span class="dot" onclick="currentSlide(2)" style="top:675px; right: 660px;"></span>
+				<span class="dot" onclick="currentSlide(3)" style="top:675px; right: 640px;"></span>
+			</section>
+			
+			<section id="other_products1">
+				<a href="Kappa Guitars 3 - Product.html"><img src="./images/prod1.png" style="margin-left:3.5%;" width=96%></a>
+			</section>
+			
+			<section id="other_products2">
+				<a href="Kappa Guitars 3 - Product.html"><img src="./images/prod2.png" style="margin-bottom:2%; margin-right:1%;" width=48%></a>
+				<a href="Kappa Guitars 3 - Product.html"><img src="./images/prod3.png" style="margin-bottom:2%; margin-right:1%;" width=48%></a>
+				<a href="Kappa Guitars 3 - Product.html"><img src="./images/prod4.png" style="margin-bottom:2%; margin-right:1%;" width=48%></a>
+				<a href="Kappa Guitars 3 - Product.html"><img src="./images/prod5.png" style="margin-bottom:2%; margin-right:1%;" width=48%></a>
+			</section>
+
+			<section id="news">
+				<div id="news_text">
+					Latest news and reviews from kappa-guitars.com
+				</div>
+				
+				<div id="news_articles">
+					<div id="steve_vai">
+						<img src="./images/vai.png" width=30%>
+						<div id="vai_txt">
+							MARCH 20: STEVE VAI<br>
+							GUITAR CLINIC AT KAPPA<br>
+							STUDIOS<br>
+							<p>Mr Vai comes to Athens! Be there<br> 
+							on Tuesday 20th!  <a href="Kappa Guitars 5 - Artists.html" style="color:#A33434">...MORE >> </a></p>
+						</div>
+						<img src="./images/Line2.png" style="margin-top:1%" width="570">
+					</div>
+				
+					<div id="bls">
+						<img src="./images/bls.png" width=30%>
+						<div id="bls_txt">
+							KAPPA GUITARS ARTIST<br>
+							ZAKK WYLDE RELEASES NEW<br>
+							ALBUM "GRIMMEST HITS"<br>
+							<p>Ozzy Osbourne's axeman releases<br>
+							10th studio album!  <a href="Kappa Guitars 5 - Artists.html" style="color:#A33434">...MORE >> </a></p>
+						</div>
+						<img src="./images/Line2.png" style="margin-top:1%; font-weight: normal;" width="570">
+					</div>
+					
+					<div id="gusg">
+						<img src="./images/gusg.png" width=30%>
+						<div id="gusg_txt">
+							AVAILABLE RIGHT NOW:<br>
+							NEW GUS G SIGNATURE<br>
+							MODEL<br>
+							<p>The Greek guitar virtuoso has released<br>
+							a new signature model with Kappa Guitars!<br><a href="Kappa Guitars 5 - Artists.html" style="color:#A33434">...MORE >> </a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section id="artists">
+				<div id="new_artists_title">
+					New Artists signing with Kappa Guitars
+				</div>
+				<div id="new_artists">
+					<a href="Kappa Guitars 5 - Artists.html"><img src="./images/devin2.png" style="margin-bottom:2%; margin-right:1%;" width="297" height="189"></a>
+					<a href="Kappa Guitars 5 - Artists.html"><img src="./images/petrucci.png" style="margin-bottom:2%; margin-right:1%;" width="297" height="191"></a>
+					<a href="Kappa Guitars 5 - Artists.html"><img src="./images/slash.png" style="margin-bottom:1%; margin-right:1%;" width="297" height="188"></a>
+					<a href="Kappa Guitars 5 - Artists.html"><img src="./images/satriani.png" style="margin-bottom:1%; margin-right:1%;" width="297" height="188"></a>
+				</div>
+			</section>
+			
+			<img id="vertical_line" src="./images/vertical.png" style="position:absolute; top:68.6%; left:49.6%;" height=7%>
+			
+			<div id="member" >
+				<p id="stay">STAY CONNECTED:</p>
+				<a href="Kappa Guitars 5 - Artists.html"><img src="./images/Become a member.png" style="position:absolute;top:71.6%;left:66%" width=14%></a>
+				<p id="touch">to keep in touch with all<br>latest news and releases!</p>
+			</div>
+		</section>
+		
+		<div id="k">
+			<img src="./images/K.png" class="center">
+		</div>
+		
+		<div id="line">
+			<img src="./images/Line.png" class="center">
+		</div>
+		
+		<table>
+			<tr>
+				<th onclick="location.href='Kappa Guitars 2 - Categories.html'">Products<p></th>
+				<th onclick="location.href='Kappa Guitars 5 - Artists.html'">Artists<p></th>
+				<th onclick="location.href='Kappa Guitars 7 - Support.html'">Support<p></th>
+				<th class="no-right-border" onclick="location.href='Kappa Guitars 10 - Contact us.html'">Contact us<p></th>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Electric Guitars</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Steve Vai</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">International Sales</td>
+				<td id="phone_non_clickable" class="no-right-border">802.110.7791</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Acoustic Guitars</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Devin Townsend</td>
+				<td onclick="location.href='Kappa Guitars 6 - Custom Shop.html'">Custom Shop</td>
+				<td class="no-right-border">info@kappa-guitars.com</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Classical Guitars</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Steve Harris</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">Technical Support</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Electric Basses</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Al Di Meola</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">General Support</td>
+				<td class="no-right-border">68 Panepistimiou Str.</td>
+			</tr>
+			<tr>
+				<td onclick="location.href='Kappa Guitars 3 - Product.html'">Accesories</td>
+				<td onclick="location.href='Kappa Guitars 5 - Artists.html'">Joe Satriani</td>
+				<td onclick="location.href='Kappa Guitars 7 - Support.html'">Dealers</td>
+				<td class="no-right-border">71503, Athens Greece</td>
+			</tr>
+		</table>
+	
+		<div id="top">
+			<input type="image" src="./images/Page Top.png" onclick="topFunction()" id="backtotopbutton" title="Back to top">
+			<script>window.onscroll = function() {scrollFunction()};</script>
+		</div>
+		
+		<footer>
+			Copyright &copy; 2018, Kappa Guitars. All rights reserved.<p>
+			Design by KStudios
+		</footer>
+	</div>
+</body>
+</html>

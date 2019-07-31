@@ -1,0 +1,484 @@
+body {
+	position: relative;
+	width: 100%;
+	background-image: url("../images/Background1.png"), url("../images/Background2.png");
+	background-color: black;
+}
+
+#main_base {
+	margin: auto;
+	width: 65%;
+	height: 100%;
+	background: #051A33;
+}
+
+header {
+	position: relative;
+}
+
+#logo {
+	background-color: #051A33;
+	width: 620px;
+	height: 100px;
+	padding: 15px 0px 0px 20px;
+}
+
+.search-container {
+	position: absolute;
+	top: 20%;
+	right: 1%;
+}
+
+input[type=text] {
+    padding: 6px;
+	margin-top: 8px;
+    font-size: 110%;
+	border: none;
+	background: #D8E0E5;
+}
+
+input:focus{
+	outline: none;
+}
+
+.search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #BEC4C7;
+	font-size: 110%;
+	border: none;
+	cursor: pointer;
+}
+
+.search-container button:hover {
+	background: #ABB1B4;
+}
+
+#user {
+	background-color: #051A33;
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	top: 69%;
+	right: 12.5%;
+}
+
+#user_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	vertical-align:top;
+	font-size: 100%;
+}
+
+#logout {
+	background-color: #051A33;
+	width: 85px;
+	height: 20px;
+	position: absolute;
+	top: 69.5%;
+	right: 2.5%;
+}
+
+#logout_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	vertical-align:top;
+	font-size: 100%;
+}
+
+#mycart {
+	background-color: #051A33;
+	width: 125px;
+	height: 20px;
+	position: absolute;
+	top: 95.5%;
+	right: 0%;
+}
+
+#mycart_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	vertical-align:top;
+	font-size: 100%;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #D8E0E5;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 3%;
+	padding-bottom: 1.5%;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+	border-right-style: solid;
+	border-width: 2px;
+	border-right-color: #D8E0E5;
+}
+
+#supp-border {
+	border-width: 0px;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: #D8E0E5;
+    text-align: center;
+    padding: 10px 45px;
+    text-decoration: none;
+	font-family: 'New Rocker';
+	font-size: 180%;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #152F4F;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.guitars {
+    display: none;
+    position: absolute;
+    background-color: #1C3B61;
+    min-width: 50px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.guitars a {
+    color: #D8E0E5;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	font-size: 117.5%;
+}
+
+.artists {
+    display: none;
+    position: absolute;
+    background-color: #1C3B61;
+    min-width: 50px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.artists a {
+    color: #D8E0E5;
+    padding: 12px 20.5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	font-size: 118%;
+}
+
+.support {
+    display: none;
+    position: absolute;
+    background-color: #1C3B61;
+    min-width: 50px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.support a {
+    color: #D8E0E5;
+    padding: 12px 12.5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	font-size: 118%;
+}
+
+.guitars a:hover {background-color: #152F4F}
+
+.artists a:hover {background-color: #152F4F}
+
+.support a:hover {background-color: #152F4F}
+
+
+.dropdown:hover .guitars {
+    display: block;
+}
+
+.dropdown:hover .artists {
+    display: block;
+}
+
+.dropdown:hover .support {
+    display: block;
+}
+
+#product_base {
+	margin: auto;
+	width: 90%;
+	background: #D8E0E5;
+}
+
+.slideshow-container {
+	padding-top: 2.5%;
+	position: relative;
+	width:90%;
+	height: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	width: auto;
+	position: absolute;
+	top: 320px;
+	padding: 2%;
+	color: black;
+	font-weight: bold;
+	font-size: 300%;
+	transition: 0.3s ease;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.prev {
+	left: 0%;
+}
+
+.next {
+	right: 0%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	transform: scale(1.3, 1.3);
+    opacity: 1;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	position:absolute;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: black;
+	border-radius: 50%;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.0s;
+	animation-name: fade;
+	animation-duration: 1.0s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 2}
+}
+
+#model {
+	background-color: #303030;
+	color: #D8E0E5;
+	float: left;
+	padding: 1%;
+	margin-top: 2%;
+	width: 40%;
+    text-align: center;
+	border-radius: 50px;
+    font-size: 150%;
+}
+
+#price {
+	background-color: #303030;
+	color: #D8E0E5;
+	float: left;
+	padding: 1%;
+	margin-top: 2%;
+	margin-left: 35%;
+	width: 25%;
+    text-align: center;
+	border-radius: 50px;
+    font-size: 150%;
+}
+
+#add_to_cart {
+	background-color: #303030;
+	color: #D8E0E5;
+	float: right;
+	padding: 1%;
+	margin-top: 1%;
+	width: 25%;
+    text-align: center;
+	border-radius: 50px;
+    font-size: 150%;
+	cursor: pointer;
+}
+
+#specs_table{
+	margin-top: 20%;
+	width: 100%;
+	color: black;
+	border-collapse: collapse;
+}
+
+#specs_table tr th{
+	font-size: 250%;
+	font-weight: normal;
+	text-align: left;
+}
+
+#specs_table tr td {
+	color: black;
+	font-size: 120%;
+	text-align: left;
+	padding-top: 15px;
+	border-right: 1px solid black;
+}
+
+#specs_table .no-right-border{
+	border-width: 0px;
+}
+
+#video {
+	margin-top: 10%;
+	width:100%; 
+	height:600px;
+}
+
+#description {
+	margin-top: 10%;
+}
+
+#description header {
+	font-size: 250%;
+}
+
+#description p {
+	font-size: 120%;
+	text-align: left;
+}
+
+/*kappa logo before table*/
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5%;
+	padding-bottom: 2%;
+}
+
+#pre_footer .no-right-border {
+	border-width: 0px;
+}
+
+#pre_footer{
+	width: 65%;
+	color: #D8E0E5;
+	position:absolute;
+	border-collapse: collapse;
+}
+
+#pre_footer tr th{
+	font-size: 140%;
+	color: #D8E0E5;
+	border-right: 1px solid #D8E0E5;
+}
+
+#pre_footer tr td{
+	color: #D8E0E5;
+	font-size: 95%;
+	text-align: center;
+	border-right: 1px solid #D8E0E5;
+}
+
+#pre_footer tr th:hover, #pre_footer tr td:hover {
+	cursor: pointer;
+}
+
+#pre_footer #phone_non_clickable {
+	cursor: auto;
+}
+
+#backtotopbutton {
+	display: none;
+	position: fixed;
+	bottom: 2%;
+	right: 16.2%;
+	padding-right: 1.5%;
+	cursor: pointer;
+}
+
+footer {
+	padding-top: 20%;
+	font-size: 80%;
+	color: #D8E0E5;
+	text-align: center;
+}
+
+
+

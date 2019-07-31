@@ -1,0 +1,654 @@
+body {
+	position: relative;
+	width: 100%;
+	background-image: url("../images/Background1.png"), url("../images/Background2.png");
+	background-color: black;
+}
+
+#main_base {
+	margin: auto;
+	width: 65%;
+	height: 100%;
+	background: #051A33;
+}
+
+header {
+	position: relative;
+}
+
+#logo {
+	background-color: #051A33;
+	width: 600px;
+	height: 85px;
+	padding: 15px 0px 0px 20px;
+}
+
+.search-container {
+	position: absolute;
+	top: 20%;
+	right: 0.5%;
+}
+
+input[type=text] {
+    padding: 6px;
+	margin-top: 8px;
+    font-size: 110%;
+	border: none;
+	background: #D8E0E5;
+}
+
+input:focus{
+	outline: none;
+}
+
+.search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #BEC4C7;
+	font-size: 110%;
+	border: none;
+	cursor: pointer;
+}
+
+.search-container button:hover {
+	background: #ABB1B4;
+}
+
+#user {
+	background-color: #051A33;
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	top: 66%;
+	right: 12.2%;
+}
+
+#user_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	font-family: "Verdana";
+	vertical-align:top;
+	font-size: 100%;
+}
+
+#logout {
+	background-color: #051A33;
+	width: 85px;
+	height: 20px;
+	position: absolute;
+	top: 66%;
+	right: 2.2%;
+}
+
+#logout_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	font-family: "Verdana";
+	vertical-align:top;
+	font-size: 100%;
+}
+
+#mycart {
+	background-color: #051A33;
+	width: 125px;
+	height: 20px;
+	position: absolute;
+	top: 91%;
+	right: 0px;
+}
+
+#mycart_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	font-family: "Verdana";
+	vertical-align:top;
+	font-size: 100%;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #D8E0E5;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 3%;
+	padding-bottom: 1.5%;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+	border-right-style: solid;
+	border-width: 2px;
+	border-right-color: #D8E0E5;
+}
+
+.no-right-border {
+	border-width: 0px;
+}
+
+#supp-border {
+	border-width: 0px;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: #D8E0E5;
+    text-align: center;
+    padding: 10px 45px;
+    text-decoration: none;
+	font-family: 'New Rocker';
+	font-size: 180%;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #152F4F;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.guitars {
+    display: none;
+    position: absolute;
+    background-color: #1C3B61;
+    min-width: 50px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.guitars a {
+    color: #D8E0E5;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	font-size: 117.5%;
+}
+
+.artists {
+    display: none;
+    position: absolute;
+    background-color: #1C3B61;
+    min-width: 50px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.artists a {
+    color: #D8E0E5;
+    padding: 12px 20.5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	font-size: 118%;
+}
+
+.support {
+    display: none;
+    position: absolute;
+    background-color: #1C3B61;
+    min-width: 50px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.support a {
+    color: #D8E0E5;
+    padding: 12px 12.5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	font-size: 118%;
+}
+
+.guitars a:hover {background-color: #152F4F}
+
+.artists a:hover {background-color: #152F4F}
+
+.support a:hover {background-color: #152F4F}
+
+
+.dropdown:hover .guitars {
+    display: block;
+}
+
+.dropdown:hover .artists {
+    display: block;
+}
+
+.dropdown:hover .support {
+    display: block;
+}
+
+#search_base {
+	margin: auto;
+	width: 100%;
+	height: 1150px;
+	background-color: #D8E0E5;
+}
+
+#filter-container {
+	width: 30%;
+	float: left;
+	background-color: #EBF1F5;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    background-color: #D8E0E5;
+	border-style: solid;
+	border-width: 1px;
+	margin-left: 2%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #B8BFC4;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #034599;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#product-container {
+	width: 66%;
+	display: inline-block;
+	margin-left: 2%;
+	margin-top: 2%;
+	background-color: #D8E0E5;
+}
+
+#product-container header {
+	font-size: 200%;
+}
+
+#product-container p {
+	font-size: 60%;
+}
+
+#guitar1 {
+	margin-top: 2%;
+	width: 816px;
+	height: 165px;
+	background-color: #EBF1F5;
+}
+
+#guitar1 #left{
+	float: left;
+}
+
+#guitar1 #right{
+	float:right;
+	width: 150px;
+	height: 165px;
+}
+
+#guitar1_txt {
+	display: inline-block;
+	vertical-align:top;
+	font-size: 150%;
+}
+
+#guitar1_price {
+	font-size: 200%;
+	text-align: right;
+	margin-right: 10px;
+	width: 140px;
+	font-weight: bold; 
+}
+
+#guitar1_add_to_cart {
+	width: 140px;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 100px;
+	font-size: 130%;
+	cursor:pointer; 
+	text-decoration: underline;
+}
+
+#guitar1_add_to_cart:hover {
+	color: #366299;
+}
+
+#guitar2 {
+	margin-top: 2%;
+	width: 816px;
+	height: 165px;
+	background-color: #EBF1F5;
+}
+
+#guitar2 #left{
+	float: left;
+}
+
+#guitar2 #right{
+	float:right;
+	width: 150px;
+	height: 165px;
+}
+
+#guitar2_txt {
+	display: inline-block;
+	vertical-align:top;
+	font-size: 150%;
+}
+
+#guitar2_price {
+	font-size: 200%;
+	text-align: right;
+	margin-right: 10px;
+	width: 140px;
+	font-weight: bold; 
+}
+
+#guitar2_add_to_cart {
+	width: 140px;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 100px;
+	font-size: 130%;
+	cursor:pointer; 
+	text-decoration: underline;
+}
+
+#guitar2_add_to_cart:hover {
+	color: #366299;
+}
+
+#guitar3 {
+	margin-top: 2%;
+	width: 816px;
+	height: 165px;
+	background-color: #EBF1F5;
+}
+
+#guitar3 #left{
+	float: left;
+}
+
+#guitar3 #right{
+	float:right;
+	width: 150px;
+	height: 165px;
+}
+
+#guitar3_txt {
+	display: inline-block;
+	vertical-align:top;
+	font-size: 150%;
+}
+
+#guitar3_price {
+	font-size: 200%;
+	text-align: right;
+	margin-right: 10px;
+	width: 140px;
+	font-weight: bold; 
+}
+
+#guitar3_add_to_cart {
+	width: 140px;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 100px;
+	font-size: 130%;
+	cursor:pointer; 
+	text-decoration: underline;
+}
+
+#guitar3_add_to_cart:hover {
+	color: #366299;
+}
+
+#guitar4 {
+	margin-top: 2%;
+	width: 816px;
+	height: 165px;
+	background-color: #EBF1F5;
+}
+
+#guitar4 #left{
+	float: left;
+}
+
+#guitar4 #right{
+	float:right;
+	width: 150px;
+	height: 165px;
+}
+
+#guitar4_txt {
+	display: inline-block;
+	vertical-align:top;
+	font-size: 150%;
+}
+
+#guitar4_price {
+	font-size: 200%;
+	text-align: right;
+	margin-right: 10px;
+	width: 140px;
+	font-weight: bold; 
+}
+
+#guitar4_add_to_cart {
+	width: 140px;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 100px;
+	font-size: 130%;
+	cursor:pointer; 
+	text-decoration: underline;
+}
+
+#guitar4_add_to_cart:hover {
+	color: #366299;
+}
+
+#guitar5 {
+	margin-top: 2%;
+	width: 816px;
+	height: 165px;
+	background-color: #EBF1F5;
+}
+
+#guitar5 #left{
+	float: left;
+}
+
+#guitar5 #right{
+	float:right;
+	width: 150px;
+	height: 165px;
+}
+
+#guitar5_txt {
+	display: inline-block;
+	vertical-align:top;
+	font-size: 150%;
+}
+
+#guitar5_price {
+	font-size: 200%;
+	text-align: right;
+	margin-right: 10px;
+	width: 140px;
+	font-weight: bold; 
+}
+
+#guitar5_add_to_cart {
+	width: 140px;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 100px;
+	font-size: 130%;
+	cursor:pointer; 
+	text-decoration: underline;
+}
+
+#guitar5_add_to_cart:hover {
+	color: #366299;
+}
+
+.checked {
+    color: orange;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5%;
+	padding-bottom: 2%;
+}
+
+table{
+	width: 65%;
+	color: #D8E0E5;
+	position:absolute;
+	border-collapse: collapse;
+}
+
+th{
+	font-size: 140%;
+	font-family: "Verdana";
+	color: #D8E0E5;
+	border-right: 1px solid #D8E0E5;
+}
+
+td{
+	color: #D8E0E5;
+	font-family: "Verdana";
+	font-size: 95%;
+	text-align: center;
+	border-right: 1px solid #D8E0E5;
+}
+
+th:hover, td:hover {
+	cursor: pointer;
+}
+
+#phone_non_clickable {
+	cursor: auto;
+}
+
+#backtotopbutton {
+	display: none;
+	position: fixed;
+	bottom: 2%;
+	right: 16.2%;
+	padding-right: 1.5%;
+	cursor: pointer;
+}
+
+footer {
+	padding-top: 20%;
+	color: #D8E0E5;
+	font-family: "Verdana";
+	text-align: center;
+	font-size: 80%;
+}
+
+
+

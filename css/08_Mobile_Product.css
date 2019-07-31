@@ -1,0 +1,355 @@
+body {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 414px;
+	max-height: auto;
+	background-color: black;
+}
+
+#main_base {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0;
+	width: 414px;
+	max-height: auto;
+	background: #051A33;
+}
+
+header {
+	position: relative;
+	height: 80px;
+}
+
+#search_base {
+	position: relative;
+	height: 30px;
+	background-color: #152F4F;
+}
+
+.search-container {
+	position: absolute;
+	top: 5%;
+	right: 2%;
+}
+
+#logout {
+	position: absolute;
+	top: 8%;
+	left: 2%;
+}
+
+#logout_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	vertical-align:top;
+	font-size: 18px;
+}
+
+#mycart {
+	width: 67px;
+	height: 30px;
+	position: absolute;
+	left:120px;
+}
+
+#mycart_txt {
+	color: #D8E0E5;
+	display: inline-block;
+	vertical-align:top;
+	font-size: 120%;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #D8E0E5;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+#cartpopup {
+	position: relative;
+	left: 90%;
+}
+
+/* Dropdown Button */
+.dropdown {
+    position: relative;
+	left: 2%;
+    display: inline-block;
+	padding: 5px 0px 0px 0px;
+	cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown_content {
+    display: none;
+    position: absolute;
+	background-color: #152F4F;
+    min-width: 100px;
+	overflow: auto;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#dropdown_home:hover {
+	background-color: #072241;
+}
+
+#dropdown_product:hover {
+	background-color: #072241;
+}
+
+/* Dropdown menu text */
+.dropdown_content a {
+    color: #D8E0E5;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {display:block;}
+
+.deadlinks {
+	cursor: auto;
+}
+
+#logo {
+	position: absolute;
+	float: right;
+	padding: 5px 0px 5px 5px;
+	right: 2%;
+}
+
+#main_product {
+	position: relative;
+	background-color: #152F4F;
+}
+
+#slideshow {
+	position: relative;
+	background-color: black;
+	height: 180px;
+}
+
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+#first_slide {
+	display: block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	bottom: 1%;
+	width: auto;
+	color: #D8E0E5;
+	font-weight: normal;
+	font-size: 250%;
+	transition: 0.3s ease;
+	border-radius: 5px 5px 5px 5px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	transform: scale(1.2, 1.2);
+    opacity: 1;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.0s;
+	animation-name: fade;
+	animation-duration: 1.0s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 2}
+}
+
+#title_price {
+	position: relative;
+	background-color: #051A33;
+	height: 70px;
+}
+
+#title {
+	position: absolute;
+	left: 2%;
+	margin-top: 2.5%;
+	background-color: #D8E0E5;
+	border-style: solid;
+	border-color: #D8E0E5;
+	border-radius: 10px;
+}
+
+#price {
+	position: absolute;
+	right: 2%;
+	margin-top: 2.5%;
+	background-color: #D8E0E5;
+	border-style: solid;
+	border-color: #D8E0E5;
+	border-radius: 10px;
+}
+
+#add_to_cart {
+	position: absolute;
+	bottom: 8%;
+	right: 5%;
+	font-size: 18px;
+	text-decoration: underline;
+	color: #D8E0E5;
+	cursor: pointer;
+}
+
+.accordion {
+    background-color: #BCC3C8;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+	text-decoration: underline;
+}
+
+.active, .accordion:hover {
+    background-color: #B2BCC2;
+}
+
+.panel {
+    padding: 0 0px;
+    background-color: #EBF0F3;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+#specs_non_clickable {
+	cursor: auto;
+}
+
+#specs_panel {
+	display: block;
+	max-height: 100%;
+}
+
+iframe {
+	display: block;
+	margin: 0px; 
+	padding: 0px;
+	border: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+	padding: 4px;
+	text-align: left;
+}
+
+tr:nth-child(even) {
+	background-color: #D8E0E5;
+}
+
+#description_text {
+	padding-left: 2%;
+	width: 414px;
+	word-wrap: break-word;
+}
+
+#kappa_div {
+	text-align: center;
+}
+
+#kappa {
+	padding-top: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+
+#line {
+	margin-top: 0.5%;
+}
+
+#bottom_links_table {
+	margin-top: 2%;
+}
+
+.bottom_links {
+	text-align: center;
+	color: #D8E0E5;
+}
+
+#product_clickable {
+	cursor: pointer;
+}
+
+footer {
+	padding-top: 8%;
+	padding-bottom: 2%;
+	color: #D8E0E5;
+	text-align: center;
+	font-size: 12px;
+}
+
+
+
+
+
+
